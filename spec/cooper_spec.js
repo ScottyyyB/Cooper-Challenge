@@ -10,7 +10,7 @@ describe("FemaleCalculator", function() {
       });
 
       it("returns Excellent if distance ran is greater than 2700", function() {
-        spyOn(Math, "random").and.returnValue(2);
+        spyOn(Math, "random").and.returnValue(1);
         calculator.female_cooper(person);
         expect(person.cooperStatus).toEqual("Excellent");
       });
@@ -45,7 +45,24 @@ describe("FemaleCalculator", function() {
         person = new Person({gender: 'female', age: 15});
         calculator = new FemaleCalculator();
       });
-      
+
+      it("returns Excellent if distance ran is greater than 2799", function() {
+        spyOn(Math, "random").and.returnValue(1);
+        calculator.female_cooper(person);
+        expect(person.cooperStatus).toEqual("Excellent");
+      });
+
+      it("returns Above Average if distance ran is greater than 2399", function() {
+        spyOn(Math, "random").and.returnValue(0.92);
+        calculator.female_cooper(person);
+        expect(person.cooperStatus).toEqual("Above Average");
+      });
+
+      it("returns Average if distance ran is greater than 2299", function() {
+        spyOn(Math, "random").and.returnValue(0.8);
+        calculator.female_cooper(person);
+        expect(person.cooperStatus).toEqual("Average");
+      });
     });
   // it("returns Below Average if distance ran is greater than 2099", function() {
   //   spyOn(Math, "random").and.returnValue(0.7);

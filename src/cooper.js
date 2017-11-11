@@ -6,7 +6,7 @@ FemaleCalculator.prototype.female_cooper = function(obj) {
   var age = obj.age;
   var distance = cooperDistance();
   var ageGroup1 = ageRange(age, 13, 14);
-  var ageGroup2 = ageRange(age, 14, 15);
+  var ageGroup2 = ageRange(age, 15, 16);
 
   if (ageGroup1 && range(distance, 2699)) {
     obj.cooperStatus = "Excellent";
@@ -22,6 +22,11 @@ FemaleCalculator.prototype.female_cooper = function(obj) {
 
   if (ageGroup2 && range(distance, 2799)) {
     obj.cooperStatus = "Excellent";
+  } else if (ageGroup2 && range(distance, 2499)) {
+    obj.cooperStatus = "Above Average";
+  }
+  else if (ageGroup2 && range(distance, 2299)) {
+    obj.cooperStatus = "Average";
   }
 
 }

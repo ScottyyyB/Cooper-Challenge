@@ -3,12 +3,13 @@ function Person(attr) {
   this.age = attr.age;
 }
 
-Person.prototype.runCooper = function() {
+Person.prototype.run_cooper = function() {
   if (this.gender == 'male') {
     calculator = new MaleCalculator();
-    calculator.maleCooper(this);
-  } if (this.gender == 'female') {
+    calculator.male_cooper(this);
+  }
+  if (this.gender == 'female') {
     calculator = new FemaleCalculator();
-    calculator.femaleCooper(this);
+    calculator.female_cooper(this);
   }
 };

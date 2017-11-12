@@ -142,6 +142,14 @@ MaleCalculator.prototype.male_cooper = function(obj) {
 
   if (ageGroup6 && range(distance, 2499)) {
     obj.cooperStatus = "Excellent";
+  } else if (ageGroup6 && range(distance, 2099)) {
+    obj.cooperStatus = "Above Average";
+  } else if (ageGroup6 && range(distance, 1699)) {
+    obj.cooperStatus = "Average";
+  } else if (ageGroup6 && range(distance, 1399)) {
+    obj.cooperStatus = "Below Average";
+  } else if (ageGroup6 && range(distance, 0)) {
+    obj.cooperStatus = "Poor";
   }
 }
 

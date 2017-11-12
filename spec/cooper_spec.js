@@ -209,5 +209,23 @@ describe("MaleCalculator", function() {
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Above Average");
       });
+
+      it("returns Average when distance ran is greater than 1699", function() {
+        spyOn(Math, "random").and.returnValue(0.62);
+        calculator.male_cooper(person);
+        expect(person.cooperStatus).toEqual("Average");
+      });
+
+      it("returns Below Average when distance ran is greater than 1399", function() {
+        spyOn(Math, "random").and.returnValue(0.55);
+        calculator.male_cooper(person);
+        expect(person.cooperStatus).toEqual("Below Average");
+      });
+
+      it("returns Poor when distance ran is greater than 0", function() {
+        spyOn(Math, "random").and.returnValue(0.3);
+        calculator.male_cooper(person);
+        expect(person.cooperStatus).toEqual("Poor");
+      });
     });
 });

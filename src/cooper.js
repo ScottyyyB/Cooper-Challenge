@@ -10,6 +10,7 @@ FemaleCalculator.prototype.female_cooper = function(obj) {
   var ageGroup3 = ageRange(age, 17, 19);
   var ageGroup4 = ageRange(age, 20, 29);
   var ageGroup5 = ageRange(age, 30, 39);
+  var ageGroup6 = ageRange(age, 40, 49);
 
   if (ageGroup1 && range(distance, 1999)) {
     obj.cooperStatus = "Excellent";
@@ -69,6 +70,22 @@ FemaleCalculator.prototype.female_cooper = function(obj) {
     obj.cooperStatus = "Below Average";
   } else if (ageGroup5 && range(distance, -1)) {
     obj.cooperStatus = "Poor";
+  }
+
+  if (ageGroup6 && range(distance, 2299)) {
+    obj.cooperStatus = "Excellent";
+  } else if (ageGroup6 && range(distance, 1899)) {
+    obj.cooperStatus = "Above Average";
+  } else if (ageGroup6 && range(distance, 1499)) {
+    obj.cooperStatus = "Average";
+  } else if (ageGroup6 && range(distance, 1199)) {
+    obj.cooperStatus = "Below Average";
+  } else if (ageGroup6 && range(distance, -1)) {
+    obj.cooperStatus = "Poor";
+  }
+
+  if (age >= 50 && range(distance, 2199)) {
+    obj.cooperStatus = "Excellent";
   }
 
   setCooperMessage(distance, obj);

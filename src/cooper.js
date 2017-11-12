@@ -3,8 +3,8 @@ function FemaleCalculator() {
 }
 
 FemaleCalculator.prototype.female_cooper = function(obj) {
-  var age = obj.age;
   var distance = cooperDistance();
+  var age = obj.age;
   var ageGroup1 = ageRange(age, 13, 14);
   var ageGroup2 = ageRange(age, 15, 16);
   var ageGroup3 = ageRange(age, 17, 19);

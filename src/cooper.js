@@ -17,6 +17,10 @@ FemaleCalculator.prototype.female_cooper = function(obj) {
     obj.cooperStatus = "Above Average";
   } else if (ageGroup1 && range(distance, 1599)) {
     obj.cooperStatus = "Average";
+  } else if (ageGroup1 && range(distance, 1499)) {
+    obj.cooperStatus = "Below Average";
+  } else if (ageGroup1 && range(distance, -1)) {
+    obj.cooperStatus = "Poor";
   }
 }
 

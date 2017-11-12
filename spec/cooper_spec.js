@@ -9,31 +9,31 @@ describe("MaleCalculator", function() {
         calculator = new MaleCalculator();
       });
 
-      it("returns Excellent if distance ran is greater than 2700", function() {
+      it("cooperStatus set to Excellent if distance ran is greater than 2700", function() {
         spyOn(Math, "random").and.returnValue(1);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Excellent");
       });
 
-      it("returns Above Average if distance ran is greater than 2399", function() {
+      it("cooperStatus set to Above Average if distance ran is greater than 2399", function() {
         spyOn(Math, "random").and.returnValue(0.8);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Above Average");
       });
 
-      it("returns Average if distance ran is greater than 2199", function() {
+      it("cooperStatus set to Average if distance ran is greater than 2199", function() {
         spyOn(Math, "random").and.returnValue(0.74);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Average");
       });
 
-      it("returns Below Average if distance ran is greater than 2099", function() {
+      it("cooperStatus set to Below Average if distance ran is greater than 2099", function() {
         spyOn(Math, "random").and.returnValue(0.7);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Below Average");
       });
 
-      it("returns Poor if distance ran is smaller than 2100", function() {
+      it("cooperStatus set to Poor if distance ran is greater than -1", function() {
         spyOn(Math, "random").and.returnValue(0.4);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Poor");
@@ -46,31 +46,31 @@ describe("MaleCalculator", function() {
         calculator = new MaleCalculator();
       });
 
-      it("returns Excellent if distance ran is greater than 2799", function() {
+      it("cooperStatus set to Excellent if distance ran is greater than 2799", function() {
         spyOn(Math, "random").and.returnValue(1);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Excellent");
       });
 
-      it("returns Above Average if distance ran is greater than 2399", function() {
+      it("cooperStatus set to Above Average if distance ran is greater than 2399", function() {
         spyOn(Math, "random").and.returnValue(0.92);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Above Average");
       });
 
-      it("returns Average if distance ran is greater than 2299", function() {
+      it("cooperStatus set to Average if distance ran is greater than 2299", function() {
         spyOn(Math, "random").and.returnValue(0.8);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Average");
       });
 
-      it("returns Below Average if distance ran is greater than 2199", function() {
+      it("cooperStatus set to Below Average if distance ran is greater than 2199", function() {
         spyOn(Math, "random").and.returnValue(0.75);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Below Average");
       });
 
-      it("returns Poor if distance ran is greater than 0", function() {
+      it("cooperStatus set to Poor if distance ran is greater than -1", function() {
         spyOn(Math, "random").and.returnValue(0.2);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Poor");
@@ -84,31 +84,31 @@ describe("MaleCalculator", function() {
         calculator = new MaleCalculator();
       });
 
-      it("returns Excellent when distance ran is greater than 2999", function() {
+      it("cooperStatus set to Excellent when distance ran is greater than 2999", function() {
         spyOn(Math, "random").and.returnValue(1);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Excellent");
       });
 
-      it("returns Above Average when distance ran is greater than 2699", function() {
+      it("cooperStatus set to Above Average when distance ran is greater than 2699", function() {
         spyOn(Math, "random").and.returnValue(0.9);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Above Average");
       });
 
-      it("returns Average when distance ran is greater than 2499", function() {
+      it("cooperStatus set to Average when distance ran is greater than 2499", function() {
         spyOn(Math, "random").and.returnValue(0.85);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Average");
       });
 
-      it("returns Below Average when distance ran is greater than 2299", function() {
+      it("cooperStatus set to Below Average when distance ran is greater than 2299", function() {
         spyOn(Math, "random").and.returnValue(0.79);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Below Average");
       });
 
-      it("returns Poor when distance ran is greater than 0", function() {
+      it("cooperStatus set to Poor when distance ran is greater than -1", function() {
         spyOn(Math, "random").and.returnValue(0.3);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Poor");
@@ -122,31 +122,31 @@ describe("MaleCalculator", function() {
         calculator = new MaleCalculator();
       });
 
-      it("returns Excellent when distance ran is greater than 2800", function() {
+      it("cooperStatus set to Excellent when distance ran is greater than 2800", function() {
         spyOn(Math, "random").and.returnValue(0.95);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Excellent");
       });
 
-      it("returns Above Average when distance ran is greater than 2399", function() {
+      it("cooperStatus set to Above Average when distance ran is greater than 2399", function() {
         spyOn(Math, "random").and.returnValue(0.81);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Above Average");
       });
 
-      it("returns Average when distance ran is greater than 2199", function() {
+      it("cooperStatus set to Average when distance ran is greater than 2199", function() {
         spyOn(Math, "random").and.returnValue(0.75);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Average");
       });
 
-      it("returns Below Average when distance ran is greater than 1599", function() {
+      it("cooperStatus set to Below Average when distance ran is greater than 1599", function() {
         spyOn(Math, "random").and.returnValue(0.6);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Below Average");
       });
 
-      it("returns Poor when distance ran is greater than 0", function() {
+      it("cooperStatus set to Poor when distance ran is greater than -1", function() {
         spyOn(Math, "random").and.returnValue(0.3);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Poor");
@@ -160,31 +160,31 @@ describe("MaleCalculator", function() {
         calculator = new MaleCalculator();
       });
 
-      it("returns Excellent if distance ran is greater than 2699", function() {
+      it("cooperStatus set to Excellent if distance ran is greater than 2699", function() {
         spyOn(Math, "random").and.returnValue(0.9);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Excellent");
       });
 
-      it("returns Above Average when distance ran is greater than 2299", function() {
+      it("cooperStatus set to Above Average when distance ran is greater than 2299", function() {
         spyOn(Math, "random").and.returnValue(0.8);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Above Average");
       });
 
-      it("returns Average when distance ran is greater than 1899", function() {
+      it("cooperStatus set to Average when distance ran is greater than 1899", function() {
         spyOn(Math, "random").and.returnValue(0.69);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Average");
       });
 
-      it("returns Below Average when distance ran is greater than 1499", function() {
+      it("cooperStatus set to Below Average when distance ran is greater than 1499", function() {
         spyOn(Math, "random").and.returnValue(0.5);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Below Average");
       });
 
-      it("returns Poor when distance ran is greater than 0", function() {
+      it("cooperStatus set to Poor when distance ran is greater than -1", function() {
         spyOn(Math, "random").and.returnValue(0.2);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Poor");
@@ -198,34 +198,103 @@ describe("MaleCalculator", function() {
         calculator = new MaleCalculator();
       });
 
-      it("returns Excellent when distance ran is greater than 2499", function() {
+      it("cooperStatus set to Excellent when distance ran is greater than 2499", function() {
         spyOn(Math, "random").and.returnValue(0.85);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Excellent");
       });
 
-      it("returns Above Average when distance ran is greater than 2099", function() {
+      it("cooperStatus set to  Above Average when distance ran is greater than 2099", function() {
         spyOn(Math, "random").and.returnValue(0.74);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Above Average");
       });
 
-      it("returns Average when distance ran is greater than 1699", function() {
+      it("cooperStatus set to Average when distance ran is greater than 1699", function() {
         spyOn(Math, "random").and.returnValue(0.62);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Average");
       });
 
-      it("returns Below Average when distance ran is greater than 1399", function() {
+      it("cooperStatus set to Below Average when distance ran is greater than 1399", function() {
         spyOn(Math, "random").and.returnValue(0.55);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Below Average");
       });
 
-      it("returns Poor when distance ran is greater than 0", function() {
+      it("cooperStatus set to Poor when distance ran is greater than -1", function() {
         spyOn(Math, "random").and.returnValue(0.3);
         calculator.male_cooper(person);
         expect(person.cooperStatus).toEqual("Poor");
       });
     });
-});
+
+    describe("Age Group Seven 50+", function() {
+
+      beforeEach(function() {
+        person = new Person({gender: 'male', age: 55});
+        calculator = new MaleCalculator();
+      });
+
+      it("cooperStatus set to Excellent when distacne ran is greater than 2399", function() {
+        spyOn(Math, "random").and.returnValue(0.86);
+        calculator.male_cooper(person);
+        expect(person.cooperStatus).toEqual("Excellent");
+      });
+
+      it("cooperStatus set to Above Average when distance ran is greater than 1999", function() {
+        spyOn(Math, "random").and.returnValue(0.76);
+        calculator.male_cooper(person);
+        expect(person.cooperStatus).toEqual("Above Average");
+      })
+
+      it("cooperStatus set to Average when distance ran is greater than 1599", function() {
+        spyOn(Math, "random").and.returnValue(0.63);
+        calculator.male_cooper(person);
+        expect(person.cooperStatus).toEqual("Average");
+      });
+
+      it("cooperStatus set to Below Average when distance ran is greater than 1299", function() {
+        spyOn(Math, "random").and.returnValue(0.433);
+        calculator.male_cooper(person);
+        expect(person.cooperStatus).toEqual("Below Average");
+      });
+
+      it("cooperStatus set to Poor when distance ran is greater than -1", function() {
+        spyOn(Math, "random").and.returnValue(0);
+        calculator.male_cooper(person);
+        expect(person.cooperStatus).toEqual("Poor");
+      });
+    });
+  });
+
+  describe("FemaleCalculator", function() {
+    var calculator;
+    var person;
+
+      describe("Age Group one 13 - 14", function() {
+
+        beforeEach(function() {
+          person = new Person({gender: 'female', age: 14});
+          calculator = new FemaleCalculator();
+        });
+
+        it("cooperStatus set to Excellent when distance ran is greater than 1999", function() {
+          spyOn(Math, "random").and.returnValue(0.9);
+          calculator.female_cooper(person);
+          expect(person.cooperStatus).toEqual("Excellent");
+        });
+
+        it("cooperStatus set to Above Average when distance ran is greater than 1899", function() {
+          spyOn(Math, "random").and.returnValue(0.65);
+          calculator.female_cooper(person);
+          expect(person.cooperStatus).toEqual("Above Average");
+        });
+
+        it("cooperStatus set to Average when distance ran is greater than 1599", function() {
+          spyOn(Math, "random").and.returnValue(0.59);
+          calculator.female_cooper(person);
+          expect(person.cooperStatus).toEqual("Average");
+        });
+      });
+    });

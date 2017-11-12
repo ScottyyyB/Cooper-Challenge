@@ -372,5 +372,17 @@ describe("MaleCalculator", function() {
           calculator.female_cooper(person);
           expect(person.cooperStatus).toEqual("Average");
         });
+
+        it("cooperStatus set to Below Average when distance ran is greater than 1699", function() {
+          spyOn(Math, "random").and.returnValue(0.58);
+          calculator.female_cooper(person);
+          expect(person.cooperStatus).toEqual("Below Average");
+        });
+
+        it("cooperStatus set to Poor when distance ran is greater than -1", function() {
+          spyOn(Math, "random").and.returnValue(0.1);
+          calculator.female_cooper(person);
+          expect(person.cooperStatus).toEqual("Poor");
+        });
       });
     });

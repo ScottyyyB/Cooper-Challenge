@@ -2,6 +2,32 @@ describe("MaleCalculator", function() {
   var calculator;
   var person;
 
+    describe("Can't call run_cooper", function() {
+      beforeEach(function() {
+        person = new Person({gender: 'male', age: 14});
+        calculator = new MaleCalculator();
+        spyOn(Math, "random").and.returnValue(1);
+        person.run_cooper()
+      });
+
+      it("should return error message if cooper test has been ran", function() {
+        expect(person.run_cooper()).toEqual("Sorry, you may not run the Cooper Test again.");
+      });
+    });
+
+    describe("Can call run_cooper", function() {
+      beforeEach(function() {
+        person = new Person({gender: 'male', age: 14});
+        calculator = new MaleCalculator();
+        spyOn(Math, "random").and.returnValue(0.1);
+        person.run_cooper()
+      });
+
+      it("should be able to run cooper test again and receive a new cooperStatus", function() {
+        expect(person.run_cooper()).not.toBe("Sorry, you may not run the Cooper Test again.");
+      });
+    });
+
     describe("Age Group One 13 - 14", function() {
 
       beforeEach(function() {
@@ -644,9 +670,9 @@ describe("MaleCalculator", function() {
         });
 
         it("cooperMessage set to correct message", function() {
-          spyOn(Math, "random").and.returnValue(0.4);
+          spyOn(Math, "random").and.returnValue(0.7);
           calculator.female_cooper(person);
-          expect(person.cooperMessage).toEqual("You ran 1200m and your status is Poor.");
+          expect(person.cooperMessage).toEqual("You ran 2210m and your status is Above Average.");
         });
 
         it("cooperStatus set to Average when distance ran is greater than 1799", function() {
@@ -655,16 +681,34 @@ describe("MaleCalculator", function() {
           expect(person.cooperStatus).toEqual("Average");
         });
 
+        it("cooperMessage set to correct message", function() {
+          spyOn(Math, "random").and.returnValue(0.62);
+          calculator.female_cooper(person);
+          expect(person.cooperMessage).toEqual("You ran 1950m and your status is Average.");
+        });
+
         it("cooperStatus set to Below Average when distance ran is greater than 1699", function() {
           spyOn(Math, "random").and.returnValue(0.54);
           calculator.female_cooper(person);
           expect(person.cooperStatus).toEqual("Below Average");
         });
 
+        it("cooperMessage set to correct message", function() {
+          spyOn(Math, "random").and.returnValue(0.54);
+          calculator.female_cooper(person);
+          expect(person.cooperMessage).toEqual("You ran 1700m and your status is Below Average.");
+        });
+
         it("cooperStatus set to Poor when distance ran is greater than -1", function() {
           spyOn(Math, "random").and.returnValue(0.1);
           calculator.female_cooper(person);
           expect(person.cooperStatus).toEqual("Poor");
+        });
+
+        it("cooperMessage set to correct message", function() {
+          spyOn(Math, "random").and.returnValue(0.1);
+          calculator.female_cooper(person);
+          expect(person.cooperMessage).toEqual("You ran 320m and your status is Poor.");
         });
       });
 
@@ -681,10 +725,22 @@ describe("MaleCalculator", function() {
           expect(person.cooperStatus).toEqual("Excellent");
         });
 
+        it("cooperMessage set to correct message", function() {
+          spyOn(Math, "random").and.returnValue(0.991);
+          calculator.female_cooper(person);
+          expect(person.cooperMessage).toEqual("You ran 3120m and your status is Excellent.");
+        });
+
         it("cooperStatus set to Above Average when distance ran is greater than 2199", function() {
           spyOn(Math, "random").and.returnValue(0.846);
           calculator.female_cooper(person);
           expect(person.cooperStatus).toEqual("Above Average");
+        });
+
+        it("cooperMessage set to correct message", function() {
+          spyOn(Math, "random").and.returnValue(0.846);
+          calculator.female_cooper(person);
+          expect(person.cooperMessage).toEqual("You ran 2660m and your status is Above Average.");
         });
 
 

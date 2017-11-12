@@ -22,6 +22,26 @@ FemaleCalculator.prototype.female_cooper = function(obj) {
   } else if (ageGroup1 && range(distance, -1)) {
     obj.cooperStatus = "Poor";
   }
+
+  if (ageGroup2 && range(distance, 2099)) {
+    obj.cooperStatus = "Excellent";
+  } else if (ageGroup2 && range(distance, 1999)) {
+    obj.cooperStatus = "Above Average";
+  } else if (ageGroup2 && range(distance, 1699)) {
+    obj.cooperStatus = "Average";
+  } else if (ageGroup2 && range(distance, 1599)) {
+    obj.cooperStatus = "Below Average";
+  } else if (ageGroup2 && range(distance, -1)) {
+    obj.cooperStatus = "Poor";
+  }
+
+  if (ageGroup3 && range(distance, 2299)) {
+    obj.cooperStatus = "Excellent";
+  } else if (ageGroup3 && range(distance, 2099)) {
+    obj.cooperStatus = "Above Average";
+  } else if (ageGroup3 && range(distance, 1799)) {
+    obj.cooperStatus = "Average";
+  }
 }
 
 function MaleCalculator() {

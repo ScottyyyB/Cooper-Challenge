@@ -46,6 +46,13 @@ FemaleCalculator.prototype.female_cooper = function(obj) {
   } else if (ageGroup3 && range(distance, -1)) {
     obj.cooperStatus = "Poor";
   }
+
+  if (ageGroup4 && range(distance, 2699)) {
+    obj.cooperStatus = "Excellent";
+  } else if (ageGroup4 && range(distance, 2199)) {
+    obj.cooperStatus = "Above Average";
+  }
+  setCooperMessage(distance, obj);
 }
 
 function MaleCalculator() {
@@ -53,8 +60,8 @@ function MaleCalculator() {
 }
 
 MaleCalculator.prototype.male_cooper = function(obj) {
-  var age = obj.age;
   var distance = cooperDistance();
+  var age = obj.age;
   var ageGroup1 = ageRange(age, 13, 14);
   var ageGroup2 = ageRange(age, 15, 16);
   var ageGroup3 = ageRange(age, 17, 19);
@@ -64,14 +71,18 @@ MaleCalculator.prototype.male_cooper = function(obj) {
 
   if (ageGroup1 && range(distance, 2699)) {
     obj.cooperStatus = "Excellent";
+    // setCooperMessage(distance, obj);
   } else if (ageGroup1 && range(distance, 2399)) {
     obj.cooperStatus = "Above Average";
+    // setCooperMessage(distance, obj);
   } else if (ageGroup1 && range(distance, 2199)) {
     obj.cooperStatus = "Average";
+    // setCooperMessage(distance, obj);
   } else if (ageGroup1 && range(distance, 2099)) {
     obj.cooperStatus = "Below Average";
   } else if (ageGroup1 && range(distance, -1)) {
     obj.cooperStatus = "Poor";
+    // setCooperMessage(distance, obj);
   }
 
   if (ageGroup2 && range(distance, 2799)) {
@@ -145,6 +156,7 @@ MaleCalculator.prototype.male_cooper = function(obj) {
   } else if (age >= 50 && range(distance, -1)) {
     obj.cooperStatus = "Poor";
   }
+  setCooperMessage(distance, obj);
 }
 
 function range(distance, range) {
@@ -155,7 +167,11 @@ function ageRange(age, range1, range2) {
   return age >= range1 && age <= range2;
 }
 
+function setCooperMessage(distance, obj) {
+  obj.cooperMessage = `You ran ${distance}m and your status is ${obj.cooperStatus}.`;
+}
+
 function cooperDistance() {
-  var number = Math.floor(Math.random() * 3000);
+  var number = Math.floor(Math.random() * 3150);
   return Math.round(number / 10) * 10;
 }

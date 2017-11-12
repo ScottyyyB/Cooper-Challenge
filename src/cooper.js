@@ -15,77 +15,85 @@ FemaleCalculator.prototype.female_cooper = function(obj) {
   if (ageGroup1 && range(distance, 1999)) {
     obj.cooperStatus = "Excellent";
   } else if (ageGroup1 && range(distance, 1899)) {
-    obj.cooperStatus = "Above Average";
+      obj.cooperStatus = "Above Average";
   } else if (ageGroup1 && range(distance, 1599)) {
-    obj.cooperStatus = "Average";
+      obj.cooperStatus = "Average";
   } else if (ageGroup1 && range(distance, 1499)) {
-    obj.cooperStatus = "Below Average";
+      obj.cooperStatus = "Below Average";
   } else if (ageGroup1 && range(distance, -1)) {
-    obj.cooperStatus = "Poor";
+      obj.cooperStatus = "Poor";
   }
 
   if (ageGroup2 && range(distance, 2099)) {
     obj.cooperStatus = "Excellent";
   } else if (ageGroup2 && range(distance, 1999)) {
-    obj.cooperStatus = "Above Average";
+      obj.cooperStatus = "Above Average";
   } else if (ageGroup2 && range(distance, 1699)) {
-    obj.cooperStatus = "Average";
+      obj.cooperStatus = "Average";
   } else if (ageGroup2 && range(distance, 1599)) {
-    obj.cooperStatus = "Below Average";
+      obj.cooperStatus = "Below Average";
   } else if (ageGroup2 && range(distance, -1)) {
-    obj.cooperStatus = "Poor";
+      obj.cooperStatus = "Poor";
   }
 
   if (ageGroup3 && range(distance, 2299)) {
     obj.cooperStatus = "Excellent";
   } else if (ageGroup3 && range(distance, 2099)) {
-    obj.cooperStatus = "Above Average";
+      obj.cooperStatus = "Above Average";
   } else if (ageGroup3 && range(distance, 1799)) {
-    obj.cooperStatus = "Average";
+      obj.cooperStatus = "Average";
   } else if (ageGroup3 && range(distance, 1699)) {
-    obj.cooperStatus = "Below Average";
+      obj.cooperStatus = "Below Average";
   } else if (ageGroup3 && range(distance, -1)) {
-    obj.cooperStatus = "Poor";
+      obj.cooperStatus = "Poor";
   }
 
   if (ageGroup4 && range(distance, 2699)) {
     obj.cooperStatus = "Excellent";
   } else if (ageGroup4 && range(distance, 2199)) {
-    obj.cooperStatus = "Above Average";
+      obj.cooperStatus = "Above Average";
   } else if (ageGroup4 && range(distance, 1799)) {
-    obj.cooperStatus = "Average";
+      obj.cooperStatus = "Average";
   } else if (ageGroup4 && range(distance, 1499)) {
-    obj.cooperStatus = "Below Average";
+      obj.cooperStatus = "Below Average";
   } else if (ageGroup4 && range(distance, -1)) {
-    obj.cooperStatus = "Poor";
+      obj.cooperStatus = "Poor";
   }
 
   if (ageGroup5 && range(distance, 2499)) {
     obj.cooperStatus = "Excellent";
   } else if (ageGroup5 && range(distance, 1999)) {
-    obj.cooperStatus = "Above Average";
+      obj.cooperStatus = "Above Average";
   } else if (ageGroup5 && range(distance, 1699)) {
-    obj.cooperStatus = "Average";
+      obj.cooperStatus = "Average";
   } else if (ageGroup5 && range(distance, 1399)) {
-    obj.cooperStatus = "Below Average";
+      obj.cooperStatus = "Below Average";
   } else if (ageGroup5 && range(distance, -1)) {
-    obj.cooperStatus = "Poor";
+      obj.cooperStatus = "Poor";
   }
 
   if (ageGroup6 && range(distance, 2299)) {
     obj.cooperStatus = "Excellent";
   } else if (ageGroup6 && range(distance, 1899)) {
-    obj.cooperStatus = "Above Average";
+      obj.cooperStatus = "Above Average";
   } else if (ageGroup6 && range(distance, 1499)) {
-    obj.cooperStatus = "Average";
+      obj.cooperStatus = "Average";
   } else if (ageGroup6 && range(distance, 1199)) {
-    obj.cooperStatus = "Below Average";
+      obj.cooperStatus = "Below Average";
   } else if (ageGroup6 && range(distance, -1)) {
-    obj.cooperStatus = "Poor";
+      obj.cooperStatus = "Poor";
   }
 
   if (age >= 50 && range(distance, 2199)) {
     obj.cooperStatus = "Excellent";
+  } else if (age >= 50 && range(distance, 1699)) {
+      obj.cooperStatus = "Above Average";
+  } else if (age >= 50 && range(distance, 1399)) {
+      obj.cooperStatus = "Average"
+  } else if (age >= 50 && range(distance, 1099)) {
+      obj.cooperStatus = "Below Average";
+  } else if (age >= 50 && range(distance, -1)) {
+      obj.cooperStatus = "Poor";
   }
 
   setCooperMessage(distance, obj);
@@ -107,90 +115,86 @@ MaleCalculator.prototype.male_cooper = function(obj) {
 
   if (ageGroup1 && range(distance, 2699)) {
     obj.cooperStatus = "Excellent";
-    // setCooperMessage(distance, obj);
   } else if (ageGroup1 && range(distance, 2399)) {
-    obj.cooperStatus = "Above Average";
-    // setCooperMessage(distance, obj);
+      obj.cooperStatus = "Above Average";
   } else if (ageGroup1 && range(distance, 2199)) {
-    obj.cooperStatus = "Average";
-    // setCooperMessage(distance, obj);
+      obj.cooperStatus = "Average";
   } else if (ageGroup1 && range(distance, 2099)) {
-    obj.cooperStatus = "Below Average";
+      obj.cooperStatus = "Below Average";
   } else if (ageGroup1 && range(distance, -1)) {
-    obj.cooperStatus = "Poor";
-    // setCooperMessage(distance, obj);
+      obj.cooperStatus = "Poor";
   }
 
   if (ageGroup2 && range(distance, 2799)) {
-    obj.cooperStatus = "Excellent";
+      obj.cooperStatus = "Excellent";
   } else if (ageGroup2 && range(distance, 2499)) {
-    obj.cooperStatus = "Above Average";
+      obj.cooperStatus = "Above Average";
   } else if (ageGroup2 && range(distance, 2299)) {
-    obj.cooperStatus = "Average";
+      obj.cooperStatus = "Average";
   } else if (ageGroup2 && range(distance, 2199)) {
-    obj.cooperStatus = "Below Average";
+      obj.cooperStatus = "Below Average";
   } else if (ageGroup2 && range(distance, -1)) {
-    obj.cooperStatus = "Poor";
+      obj.cooperStatus = "Poor";
   }
 
   if (ageGroup3 && range(distance, 2999)) {
     obj.cooperStatus = "Excellent";
   } else if (ageGroup3 && range(distance, 2699)) {
-    obj.cooperStatus = "Above Average";
-  } else if (ageGroup3 && range(distance, 2499)) {
-    obj.cooperStatus = "Average";
+      obj.cooperStatus = "Above Average";
+    } else if (ageGroup3 && range(distance, 2499)) {
+      obj.cooperStatus = "Average";
   } else if (ageGroup3 && range(distance, 2299)) {
-    obj.cooperStatus = "Below Average";
+      obj.cooperStatus = "Below Average";
   } else if (ageGroup3 && range(distance, -1)) {
-    obj.cooperStatus = "Poor";
+      obj.cooperStatus = "Poor";
   }
 
   if (ageGroup4 && range(distance, 2799)) {
     obj.cooperStatus = "Excellent";
   } else if (ageGroup4 && range(distance, 2399)) {
-    obj.cooperStatus = "Above Average";
+      obj.cooperStatus = "Above Average";
   } else if (ageGroup4 && range(distance, 2199)) {
-    obj.cooperStatus = "Average";
+      obj.cooperStatus = "Average";
   } else if (ageGroup4 && range(distance, 1599)) {
-    obj.cooperStatus = "Below Average";
+      obj.cooperStatus = "Below Average";
   } else if (ageGroup4 && range(distance, -1)) {
-    obj.cooperStatus = "Poor";
+      obj.cooperStatus = "Poor";
   }
 
   if (ageGroup5 && range(distance, 2699)) {
     obj.cooperStatus = "Excellent";
   } else if (ageGroup5 && range(distance, 2299)) {
-    obj.cooperStatus = "Above Average";
+      obj.cooperStatus = "Above Average";
   } else if (ageGroup5 && range(distance, 1899)) {
-    obj.cooperStatus = "Average";
+      obj.cooperStatus = "Average";
   } else if (ageGroup5 && range(distance, 1499)) {
-    obj.cooperStatus = "Below Average";
+      obj.cooperStatus = "Below Average";
   } else if (ageGroup5 && range(distance, -1)) {
-    obj.cooperStatus = "Poor";
+      obj.cooperStatus = "Poor";
   }
 
   if (ageGroup6 && range(distance, 2499)) {
     obj.cooperStatus = "Excellent";
   } else if (ageGroup6 && range(distance, 2099)) {
-    obj.cooperStatus = "Above Average";
+      obj.cooperStatus = "Above Average";
   } else if (ageGroup6 && range(distance, 1699)) {
-    obj.cooperStatus = "Average";
+      obj.cooperStatus = "Average";
   } else if (ageGroup6 && range(distance, 1399)) {
-    obj.cooperStatus = "Below Average";
+      obj.cooperStatus = "Below Average";
   } else if (ageGroup6 && range(distance, -1)) {
-    obj.cooperStatus = "Poor";
+      obj.cooperStatus = "Poor";
   }
 
   if (age >= 50 && range(distance, 2399)) {
     obj.cooperStatus = "Excellent";
   } else if (age >= 50 && range(distance, 1999)) {
-    obj.cooperStatus = "Above Average";
+      obj.cooperStatus = "Above Average";
   } else if (age >= 50 && range(distance, 1599)) {
-    obj.cooperStatus = "Average";
+      obj.cooperStatus = "Average";
   } else if (age >= 50 && range(distance, 1299)) {
-    obj.cooperStatus = "Below Average";
+      obj.cooperStatus = "Below Average";
   } else if (age >= 50 && range(distance, -1)) {
-    obj.cooperStatus = "Poor";
+      obj.cooperStatus = "Poor";
   }
   setCooperMessage(distance, obj);
 }
